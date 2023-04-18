@@ -1,0 +1,151 @@
+* {
+    transition: all .25s;
+}
+
+@media screen and (max-width: 1366px) {
+    main section {
+        flex-direction: column;
+    }
+
+    main nav {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center; /*space-between when div is uncommented*/
+    }
+
+    main nav ul {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    nav ul li .fa-facebook {
+        color: #3b5998;
+    }
+
+    nav ul li .fa-linkedin {
+        color: #006192;
+    }
+    
+    nav ul li .fa-twitter {
+        color: #1DA1F2;
+    }
+
+    section.menu > div > a {
+        color: #ea9575;
+    }
+
+    .submenu {
+        height: 18.75rem;
+        opacity: 1;
+        visibility: visible;
+
+        margin-top: 2.5rem;
+    }
+
+    .submenu-trigger > a {
+        text-decoration: underline 4px;
+        text-underline-offset: .75rem;
+    }
+
+    .submenu li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* grid */
+    main section {
+        align-items: center;
+    }
+
+/* nav */
+nav ul li {
+    font-size: 4.5rem;
+}
+    nav ul li:hover {
+        opacity: 1;
+    }
+        nav ul li i {
+            transition: all .3s;
+        }
+        nav ul li:hover .fa-facebook {
+            color: #3b5998;
+        }
+
+        nav ul li:hover .fa-linkedin {
+            color: #006192;
+        }
+        
+        nav ul li:hover .fa-twitter {
+            color: #1DA1F2;
+        }
+
+main nav {
+    margin-bottom: 0;
+}
+
+main footer {
+    margin-top: 0;
+}
+
+/* content */
+section.menu {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+section.menu > div {
+    opacity: .7;
+    font-size: 5rem;
+
+    transition: all 1s;
+}
+    section.menu > div:hover {
+        opacity: 1;
+        margin: 0 2.5rem;
+    }
+    section.menu > div:hover > a {
+        color: #ea9575;
+    }
+
+section.menu > div a {
+    padding: 1.25rem 0;
+}
+ 
+
+/* submenu works */
+.text {
+    font-size: 3rem;
+}
+
+@media screen and (min-width: 1366px) {
+    .submenu {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+
+        transition: all .5s;
+    }
+
+    .submenu-trigger:hover .submenu {
+        height: 18.75rem;
+        opacity: .7;
+        visibility: visible;
+
+        margin-top: 2.5rem;
+    }
+}
+
+    .submenu li {
+        margin-bottom: 1.25rem;
+    }
+    
+.submenu-trigger:hover > a {
+    text-decoration: underline 4px;
+    text-underline-offset: .75rem;
+}

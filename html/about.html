@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+
+    <link rel="stylesheet" href="../css/GLOBAL.css"> <!-- preset for every page -->
+    <link rel="stylesheet" href="../css/about.css"> <!-- unqiue styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- fontawesome cdn -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <main>
+        <nav>
+            <a href="../index.html">
+                <svg id="logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104.5 105" width="104.5" height="105">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: none;
+                        stroke: white;
+                        stroke-miterlimit: 10;
+                        stroke-width: 5px;
+                      }
+
+                      .cls-2 {
+                        fill: white;
+                      }
+                    </style>
+                  </defs>
+                  <path class="cls-1 svg-elem-1" d="m52,2.5v35c0,8.28,6.72,15,15,15h20c8.28,0,15,6.72,15,15v35"></path>
+                  <rect class="cls-1 svg-elem-2" x="2.5" y="52" width="50" height="50" rx="15" ry="15"></rect>
+                  <circle class="cls-2 svg-elem-3" cx="52" cy="2.5" r="2.5"></circle>
+                  <circle class="cls-2 svg-elem-4" cx="102" cy="102.5" r="2.5"></circle>
+                </svg>
+            </a>
+
+            <ul>
+                <li><a href="../index.html"><span class="material-symbols-outlined header-back-arrow">chevron_left</span><span class="pagename">about</span><span class="back">return</span></a></li>
+            </ul>
+        </nav>
+
+        <section>
+          <img src="https://placehold.co/300x300?text=my+photo" alt="" class="me">
+
+            <div class="dropdown">      
+              <div>
+                <input type="radio" name="menuopt" id="drop1" />
+                <label class="opener title" for="drop1">Education</label>
+                <label class="closer title" for="dropclose">Education</label>
+
+                <div class="text education scrollbar">
+                  Secondary School, Lviv, Ukraine <br>
+                  Computer Science, Technological College, Lviv, Ukraine <br><br>
+                  <span class="accent">Python</span>, 2 years school learning <br>
+                  <span class="accent">HTML & CSS</span>, 1 year course <br>
+                  <span class="accent">JavaScript, jQuery, PHP</span>, 1.5 year course <br>
+                  <span class="accent">Java and C++</span>, Self-taught developer, 3 years of practise<br>
+                </div>
+              </div>
+
+              <div>
+                <input type="radio" name="menuopt" id="drop2" />
+                <label class="opener title" for="drop2">Hobbies</label>
+                <label class="closer title" for="dropclose">Hobbies</label>
+
+                <div class="text hobbies scrollbar">
+                  <span class="accent">what are my hobbies?</span><br><br>
+
+                  when it happens that i have free time i usually either go to gym or for a walk, if i don't have enough time; spend time extending my programming knowledge or reading. <br><br>
+
+                  i really like psychology related books, detectives and mythical stories. doing gym and going for a walk helps me to keep my body healthy and free my mind after a busy day. i prefer studying at night, it is more comfortable and productive for me at this time
+                </div>
+              </div>
+
+              <div>
+                <input type="radio" name="menuopt" id="drop3" />
+                <label class="opener title" for="drop3">Why</label>
+                <label class="closer title" for="dropclose">Why</label>
+
+                <div class="text why scrollbar">
+                  <span class="accent">why did i choose this path?</span><br><br>
+                  i can't say exactly why i did. once i have seen my fathers friend working, looking at some crazy amount of unreadable text. i asked my dad: "what is this guy doing?" and he answered, that the guy was doing a backend part of website, which meant the actual algorythm for it, defining what should be done <br><br>
+
+                  i was shocked, interested and satisfied at the same time. since that moment <span class="accent">i knew exactly</span> what i wanted to do <br><br>
+
+                  my journey started from learning basics of html and css, while also looking for youtube videos on algorythms. then i did a few courses for backend: javascript, php and jquery. when i finished those i figured out <span class="accent">that it is not</span> what i actually wanted to do.<br><br>
+
+                  some time after i started googling up and found a lot of material on <span class="accent">actual coding</span>, where people were creating games and applications, that's where my journey started, continuing nowadays
+                </div>
+              </div>
+
+                <input type="radio" name="menuopt" id="dropclose" checked/> 
+            </div>
+        </section>
+
+        <footer>
+          Copyright © dh 2023
+        </footer>
+    </main>
+
+    <div id="bg"></div> <!-- bg animation holder-->
+    
+</body>
+</html>

@@ -1,0 +1,170 @@
+    /* grid */
+section {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+section .me {
+    flex: 0 1 25rem;
+    margin-right: 5rem;
+    border-radius: 4rem;
+}
+
+section .dropdown {
+    flex: 1 0 18.75rem;
+    margin-right: 2.5rem;
+}
+
+    /* dropdown design */
+div.dropdown {
+    font-family: FutureLight;
+    font-size: 2.25rem;
+    letter-spacing: .5rem;
+}
+
+.dropdown div.text {
+    padding: .5rem 0 0 2rem;
+    overflow: hidden;
+
+    opacity: .7;
+}
+
+.dropdown .title {
+    cursor: pointer;
+}
+
+.accent {
+    color: skyblue;
+}
+
+    /* dropdown technical (never touch this again) */
+.dropdown div.text, 
+.dropdown input, 
+.dropdown .closer, 
+.dropdown input:checked ~ .opener
+{
+    height: 0;
+    opacity: 0;
+    /* width: 0; */
+    visibility: hidden;
+    
+    overflow: hidden;
+}
+
+.dropdown input:checked ~ div.text,
+.dropdown input:checked ~ .closer
+{
+    opacity: 1;
+    /* width: 100%; */
+    visibility: visible;
+    overflow-y: auto;
+}
+    .dropdown input:checked ~ div.text.education {
+        height: 180px; 
+    }
+
+    .dropdown input:checked ~ div.text.hobbies {
+        height: 240px; 
+        max-height: 570px;
+    }
+
+    .dropdown input:checked ~ div.text.why {
+        height: 570px; 
+    }
+
+        /* automatic side for mobile devices (requires removing animation to work properly) */
+    @media screen and (max-width: 1366px) {
+        .dropdown input:checked ~ div.text.education {
+            max-height: 260px; 
+            height: auto;
+        }
+
+        .dropdown input:checked ~ div.text.hobbies {
+            max-height: 260px; 
+            height: auto;
+        }
+
+        .dropdown input:checked ~ div.text.why {
+            max-height: 260px; 
+            height: auto;
+        }
+    }
+
+.dropdown input:checked ~ .closer {
+    height: auto;
+}
+
+div.dropdown > div {
+    position: relative;
+}
+
+label.closer, label.opener {
+    position: absolute;
+    left: 0;
+}
+
+label.closer {
+    color: rgb(234, 149, 117);
+}
+
+    /* dropdown animation */
+label.opener {
+    opacity: .7;
+    transition: all .3s;
+}
+    label.opener:hover {
+        opacity: 1;
+        color: rgb(234, 149, 117);
+    }
+
+.dropdown div.text {
+    transition: all 1s;
+}
+
+    /* mobile */
+@media screen and (max-width: 1366px){
+
+    section {
+        flex-direction: column;
+    }
+
+    section .me {
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-bottom: 3rem;
+    }
+
+    section .dropdown {
+        margin-right: 0;
+    }
+
+    main nav {
+        margin-bottom: 0;
+    }
+
+    .dropdown div.text {
+        overflow-y: auto;
+    }
+
+        /* designs */
+    label.opener {
+        opacity: 1;
+        color: rgb(234, 149, 117);
+    }
+
+    .title {
+        font-size: 3rem;
+        z-index: 1;
+    }
+
+    .dropdown div.text {
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        z-index: 2;
+
+        transition: all 0s;
+    }
+}
