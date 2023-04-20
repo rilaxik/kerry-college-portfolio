@@ -70,7 +70,7 @@ div.dropdown {
     }
 
     .dropdown input:checked ~ div.text.why {
-        height: 570px; 
+        height: 560px; 
     }
 
         /* automatic side for mobile devices (requires removing animation to work properly) */
@@ -134,7 +134,7 @@ label.opener {
         margin-left: auto;
         margin-bottom: 5rem;
         flex-basis: 10rem;
-        height: 10rem;
+        height: 20rem;
     }
 
     section .dropdown {

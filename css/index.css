@@ -146,6 +146,6 @@ section.menu > div a {
     }
     
 .submenu-trigger:hover > a {
-    text-decoration: underline 4px;
+    text-decoration: underline 2px;
     text-underline-offset: .75rem;
 }
