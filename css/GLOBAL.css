@@ -73,6 +73,10 @@ u {
   letter-spacing: 3px;
 }
 
+a.text {
+  text-decoration: 1px underline;
+}
+
   /* grid */
 main {
   display: flex;
