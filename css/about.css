@@ -1,171 +1,169 @@
-    /* grid */
+/* grid */
 section {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
 }
 
 section .me {
-    flex: 0 1 25rem;
-    margin-right: 5rem;
-    border-radius: 4rem;
+  flex: 0 1 25rem;
+  margin-right: 5rem;
+  border-radius: 4rem;
 }
 
 section .dropdown {
-    flex: 1 0 18.75rem;
-    margin-right: 2.5rem;
+  flex: 1 0 18.75rem;
+  margin-right: 2.5rem;
 }
 
-    /* dropdown design */
+/* dropdown design */
 div.dropdown {
-    font-family: FutureLight;
-    font-size: 2.25rem;
-    letter-spacing: .5rem;
+  font-family: FutureLight;
+  font-size: 2.25rem;
+  letter-spacing: 0.5rem;
 }
 
 .dropdown div.text {
-    padding: .5rem 0 0 2rem;
-    overflow: hidden;
+  padding: 0.5rem 0 0 2rem;
+  overflow: hidden;
 
-    opacity: .7;
+  opacity: 0.7;
 }
 
 .dropdown .title {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .accent {
-    color: skyblue;
+  color: skyblue;
 }
 
-    /* dropdown technical (never touch this again) */
-.dropdown div.text, 
-.dropdown input, 
-.dropdown .closer, 
-.dropdown input:checked ~ .opener
-{
-    height: 0;
-    opacity: 0;
-    /* width: 0; */
-    visibility: hidden;
-    
-    overflow: hidden;
+/* dropdown technical (never touch this again) */
+.dropdown div.text,
+input,
+.dropdown .closer,
+.dropdown input:checked ~ .opener {
+  height: 0;
+  opacity: 0;
+  /* width: 0; */
+  visibility: hidden;
+
+  overflow: hidden;
 }
 
 .dropdown input:checked ~ div.text,
-.dropdown input:checked ~ .closer
-{
-    opacity: 1;
-    /* width: 100%; */
-    visibility: visible;
-    overflow-y: auto;
+.dropdown input:checked ~ .closer {
+  opacity: 1;
+  /* width: 100%; */
+  visibility: visible;
+  overflow-y: auto;
 }
-    .dropdown input:checked ~ div.text.education {
-        height: 180px; 
-    }
+.dropdown input:checked ~ div#education {
+  height: 180px;
+}
 
-    .dropdown input:checked ~ div.text.hobbies {
-        height: 240px; 
-        max-height: 570px;
-    }
+.dropdown input:checked ~ div#hobbies {
+  height: 230px;
+  max-height: 500px;
+}
 
-    .dropdown input:checked ~ div.text.why {
-        height: 560px; 
-    }
+.dropdown input:checked ~ div#why {
+  height: 360px;
+}
 
-        /* automatic side for mobile devices (requires removing animation to work properly) */
-    @media screen and (max-width: 1366px) {
-        .dropdown input:checked ~ div.text.education {
-            max-height: 260px; 
-            height: auto;
-        }
-
-        .dropdown input:checked ~ div.text.hobbies {
-            max-height: 260px; 
-            height: auto;
-        }
-
-        .dropdown input:checked ~ div.text.why {
-            max-height: 260px; 
-            height: auto;
-        }
-    }
+/* automatic size for mobile devices (requires removing animation to work properly) */
+@media screen and (max-width: 1366px) {
+  .dropdown input:checked ~ div#education,
+  .dropdown input:checked ~ div#hobbies,
+  .dropdown input:checked ~ div#why {
+    max-height: calc(100vh - 28rem);
+    height: auto;
+  }
+}
 
 .dropdown input:checked ~ .closer {
-    height: auto;
+  height: auto;
 }
 
 div.dropdown > div {
-    position: relative;
+  position: relative;
 }
 
-label.closer, label.opener {
-    position: absolute;
-    left: 0;
+label.closer,
+label.opener {
+  position: absolute;
+  left: 0;
 }
 
 label.closer {
-    color: rgb(234, 149, 117);
+  color: rgb(234, 149, 117);
 }
 
-    /* dropdown animation */
+/* dropdown animation */
 label.opener {
-    opacity: .7;
-    transition: all .3s;
+  opacity: 0.7;
+  transition: all 0.3s;
 }
-    label.opener:hover {
-        opacity: 1;
-        color: rgb(234, 149, 117);
-    }
+label.opener:hover {
+  opacity: 1;
+  color: rgb(234, 149, 117);
+}
 
 .dropdown div.text {
-    transition: all 1s;
+  transition: all 1s;
 }
 
-    /* mobile */
-@media screen and (max-width: 1366px){
+/* mobile */
+@media screen and (max-width: 1366px) {
+  /* grid */
+  section {
+    flex-direction: column;
+  }
 
-    section {
-        flex-direction: column;
-    }
+  section .me {
+    height: 0;
+    flex-basis: 0;
 
-    section .me {
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: 5rem;
-        flex-basis: 10rem;
-        height: 20rem;
-    }
+    transition: all 0s;
+  }
 
-    section .dropdown {
-        margin-right: 0;
-    }
+  section .dropdown {
+    margin-right: 0;
+  }
 
-    main nav {
-        margin-bottom: 0;
-    }
+  main nav {
+    margin-bottom: 0;
+  }
 
-    .dropdown div.text {
-        overflow-y: auto;
-    }
+  .dropdown div.text {
+    overflow-y: auto;
+  }
 
-        /* designs */
-    label.opener {
-        opacity: 1;
-        color: rgb(234, 149, 117);
-    }
+  /* designs */
+  label.opener {
+    opacity: 1;
+    color: rgb(234, 149, 117);
+  }
 
-    .title {
-        font-size: 3rem;
-        z-index: 1;
-    }
+  .title {
+    font-size: 3rem;
+    z-index: 1;
+  }
 
-    .dropdown div.text {
-        font-size: 2rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        z-index: 2;
+  .dropdown div.text {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    z-index: 2;
 
-        transition: all 0s;
-    }
+    transition: all 0s;
+  }
+
+  input#dropclose:checked ~ .me {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3rem;
+    flex-basis: 10rem;
+    height: 20rem;
+  }
 }
