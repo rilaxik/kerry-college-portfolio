@@ -1,90 +1,160 @@
-    /* grid */
+* {
+  transition: color .25s, opacity .25s;
+}
+
+/* grid */
 section {
-    display: flex;
-    gap: 2rem;
-    overflow-x: auto;
-    overflow-y: auto;
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  overflow-y: auto;
 }
 
-    /* cards */
+/* cards */
 .card {
-    background-color: rgba(100,100,100, .3);
-    border-radius: 2rem;
-    text-align: center;
-    cursor: pointer;
-        transition: all .25s;
+  background-color: rgba(100, 100, 100, 0.3);
+  border-radius: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s;
+  position: relative;
 
-    flex: 1;
-    padding: .5rem;
-    max-width: 25rem;
-    min-width: 12.5rem;
+  flex: 1;
+  padding: 0.5rem;
+  max-width: 25rem;
+  min-width: 12.5rem;
+
+  /* enable to let cards stretch to the bottom of the page */
+  /* height: fit-content; */
 }
-    
+
 .card img {
-    border-radius: 2rem;
-    max-width: 100%;
-    max-height: 100%;
-        transition: all .25s;
-} 
+  border-radius: 2rem;
+  max-width: 100%;
+  max-height: 100%;
+  transition: all 0.25s;
+}
 
 .card .title {
-    margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
-    /* cards scrollbar */
+/* card buttons */
+#buttons .buttons-block {
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#buttons .buttons-block div:first-child {
+  margin-bottom: 2rem;
+}
+
+#buttons .buttons-block a {
+  color: white;
+  background-color: rgba(0,0,0,.5);
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 1px solid white;
+}
+
+/* cards scrollbar */
 section::-webkit-scrollbar {
-    height: .625rem;
-    width: .625rem;
+  height: 0.625rem;
+  width: 0.625rem;
 }
 
 section::-webkit-scrollbar-track {
-    box-shadow: none
+  box-shadow: none;
 }
 
 section::-webkit-scrollbar-thumb {
-    background-color: rgba(255,255,255, .1);
-    border-radius: .5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
 }
 
-    /* footer */
+/* footer */
 footer {
-    margin-top: 1.25rem;
+  margin-top: 1.25rem;
 }
 
-    /* desktop animations */
+/* desktop animations */
 @media screen and (min-width: 1366px) {
-    .card:hover {
-        background-color: rgba(100,100,100, .5);
-    }
+  .card:hover {
+    background-color: rgba(100, 100, 100, 0.5);
+  }
 
-    .card:hover .title{
-        color: rgb(234, 149, 117);
-    }
+  .card:hover .title {
+    color: rgb(234, 149, 117);
+  }
 
-    .card:hover img:not(.png) {
-        box-shadow: 5px 10px 18px 2px rgba(0,0,0, .5);
-    }
+  section .card:hover img:not(.png) {
+    box-shadow: 5px 10px 18px 2px rgba(0, 0, 0, 0.5);
+  }
 
-    .card:hover img.png {
-        filter: drop-shadow(5px 10px 8px rgba(0,0,0, .5));
-    }
+  section .card:hover img.png {
+    filter: drop-shadow(5px 10px 8px rgba(0, 0, 0, 0.5));
+  }
+
+  section#buttons .card:hover img {
+    opacity: .5;
+  }
+
+  section#buttons .card:hover .buttons-block {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #buttons .buttons-block a:hover {
+    color: rgb(234, 149, 117);
+    background-color: rgba(0,0,0,1);
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 1px solid white;
+  }
 }
 
-    /* phone grid */
+/* mobile */
 @media screen and (max-width: 1366px) {
-    section {
-        flex-direction: column;
-        align-items: center;
+  /* grid */
+  section {
+    flex-direction: column;
+    align-items: center;
 
-        padding-bottom: 0;
-        padding-right: 1rem;
-    }
+    padding-bottom: 0;
+    padding-right: 1rem;
+  }
 
-    .card {
-        max-width: 50rem;
-    }
+  .card {
+    max-width: 50rem;
+  }
 
-    .text {
-        font-size: 1.5rem;
-    }
+  /* appreance */
+  .text {
+    font-size: 1.5rem;
+  }
+
+  #buttons .buttons-block {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #buttons .buttons-block {
+    top: 4rem;
+  }
+
+  #buttons .buttons-block a {
+    padding: 2rem;
+    font-size: 4rem;
+  }
+
+  #buttons .buttons-block div:first-child {
+    margin-bottom: 4rem;
+  }
 }
