@@ -1,83 +1,83 @@
 * {
-    transition: all .5s;
+  transition: all 0.5s;
 }
 
 /* grid */
 section {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 4rem;
 }
 
 .block {
-    display: flex; 
-    flex: 1 1 calc(50% - 2rem);
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  flex: 1 1 calc(50% - 2rem);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-    border-radius: 2rem;
-    position: relative;
-    overflow: hidden;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .block a {
-    min-width: 100%;
-    min-height: 100%;
+  min-width: 100%;
+  min-height: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.block a div{
-    padding: 25px 25%;
-    border-radius: 2rem;
+.block a div {
+  padding: 25px 25%;
+  border-radius: 2rem;
 }
 
 .block img {
-    width: 100%;
-    position: absolute;
-    margin-right: auto;
-    margin-left: auto;
-    z-index: -1;
+  width: 100%;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: -1;
 }
 
 /* footer */
 footer {
-    margin-top: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 @media screen and (min-width: 1366px) {
-    .block:hover a div {
-        background-color: rgba(234, 149, 117, .5);
-    }
+  .block:hover a div {
+    background-color: rgba(234, 149, 117, 0.5);
+  }
 
-    .block:hover {
-        background-color: rgba(0,0,0,.7);
-    }
+  .block:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
 }
 
 @media screen and (max-width: 1366px) {
-    section {
-        flex-direction: column;
-    }
-    
-    .block {
-        flex: 1 1 100px;
-    }
+  section {
+    flex-direction: column;
+  }
 
-    main nav {
-        margin-bottom: 0;
-    }
+  .block {
+    flex: 1 1 100px;
+  }
 
-    .block a div {
-        background-color: rgba(234, 149, 117, .5);
-        padding: 15px 15%;
-    }
+  main nav {
+    margin-bottom: 0;
+  }
 
-    .block {
-        background-color: rgba(0,0,0,.3);
-    }
+  .block a div {
+    background-color: rgba(234, 149, 117, 0.5);
+    padding: 15px 15%;
+  }
+
+  .block {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
