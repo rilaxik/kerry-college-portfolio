@@ -66,12 +66,15 @@ main section {
 nav ul li {
   font-size: 4.5rem;
 }
+
 nav ul li:hover {
   opacity: 1;
 }
+
 nav ul li i {
   transition: all 0.3s;
 }
+
 nav ul li:hover .fa-facebook {
   color: #3b5998;
 }
@@ -80,8 +83,8 @@ nav ul li:hover .fa-linkedin {
   color: #006192;
 }
 
-nav ul li:hover .fa-twitter {
-  color: #1da1f2;
+nav ul li:hover .fa-github {
+  color: bisque;
 }
 
 main nav {
